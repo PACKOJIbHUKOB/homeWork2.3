@@ -1,6 +1,5 @@
 public abstract class  Transport implements Service {
     private String modelName;
-
     private int wheelsCount;
 
     public Transport(String modelName, int wheelsCount) {
@@ -14,5 +13,9 @@ public abstract class  Transport implements Service {
 
     public int getWheelsCount() {
         return wheelsCount;
+    }
+
+    public void setWheelsCount(int wheelsCount) {
+        this.wheelsCount = wheelsCount;
     }
 }
