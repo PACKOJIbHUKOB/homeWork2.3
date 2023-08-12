@@ -1,4 +1,4 @@
-public abstract class  Transport {
+public abstract class  Transport implements Service {
     private String modelName;
 
     private int wheelsCount;
