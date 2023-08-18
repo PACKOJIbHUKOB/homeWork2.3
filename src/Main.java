@@ -1,38 +1,20 @@
 public class Main {
     public static void main(String[] args) {
-        Car[] car ={
-                new Car("car1", 4),
-                new Car ("car2", 4),
-        };
+        Car car1 = new Car("car1", 4);
+        Car car2 =new Car ("car2", 4);
 
-        Truck[] truck = {
-                new Truck("truck1", 6),
-                new Truck("truck2", 8),
-        };
+        Service truck1 = new Truck("truck1", 6);
+        Truck truck2 = new Truck("truck2", 8);
 
+        Bicycle bicycle1 = new Bicycle("bicycle1", 2);
+        Bicycle bicycle2 =   new Bicycle("bicycle2", 2);
 
-        Bicycle[] bicycle = {
-                new Bicycle("bicycle1", 2),
-                new Bicycle("bicycle2", 2),
-        };
-        Transport[]transports=new Transport[car.length+ truck.length+ bicycle.length];
-        for (int i = 0; i < car.length; i++) {
-            transports[i]=car[i];
-        }
-        for (int i = 0; i < truck.length; i++) {
-            transports[i+ car.length]=truck[i];
-        }
-        for (int i = 0; i < bicycle.length; i++) {
-            transports[i+ car.length+ truck.length]=bicycle[i];
-        }
-//
-//        ServiceStation station = new ServiceStation();
-//        station.check(car, null, null);
-//        station.check(car2, null, null);
-//        station.check(null, bicycle, null);
-//        station.check(null, bicycle2, null);
-//        station.check(null, null, truck);
-//        station.check(null, null, truck2);
+        ServiceStation station = new ServiceStation();
+        station.check(car1);
+        station.check(car2);
+        station.check(bicycle1);
+        station.check(bicycle2);
+        station.check(truck1);
+        station.check(truck2);
     }
-
 }
